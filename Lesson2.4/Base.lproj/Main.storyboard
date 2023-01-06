@@ -34,6 +34,9 @@
                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                         <color key="maximumTrackTintColor" systemColor="systemOrangeColor"/>
                                         <color key="thumbTintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="KJo-9P-Syo"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnj-Sg-t1y">
                                         <rect key="frame" x="0.0" y="141" width="361" height="20.333333333333343"/>

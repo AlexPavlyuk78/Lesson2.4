@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         
         segmentedControl.insertSegment(withTitle: "Third", at: 2, animated: false)
         setupMainLabel()
+        setupSlider()
         
     }
     // MARK: - IB Actions.
@@ -39,15 +40,29 @@ class ViewController: UIViewController {
             mainLabel.textColor = .yellow
         }
     }
+    @IBAction func sliderAction() {
+        
+        mainLabel.text = "\(slider.value)"
+        view.backgroundColor = view.backgroundColor?.withAlphaComponent(CGFloat(slider.value))
+        
+    }
     
     // MARK: - Private method.
     private func setupMainLabel() {
         // we have to move here all logical parameters.
         
-        mainLabel.text = "Cat & Fox !!!"
+        mainLabel.text = String(slider.value)
         mainLabel.font = UIFont.systemFont(ofSize: 35)
         mainLabel.textAlignment = .center
         mainLabel.numberOfLines = 2
         
+    }
+    private func setupSlider () {
+        slider.value = 1
+        slider.minimumValue = 0
+        slider.maximumValue = 1
+        slider.minimumTrackTintColor = .yellow
+        slider.maximumTrackTintColor = .green
+        slider.thumbTintColor = .blue
     }
 }
