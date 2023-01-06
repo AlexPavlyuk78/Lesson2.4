@@ -44,7 +44,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="segmentedControl" destination="Wja-5O-KFx" id="qgM-Ws-vRg"/>
+                        <outlet property="mainLabel" destination="mnj-Sg-t1y" id="eL9-v2-qC7"/>
+                        <outlet property="segmentedControl" destination="Wja-5O-KFx" id="0F6-oO-Azg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
