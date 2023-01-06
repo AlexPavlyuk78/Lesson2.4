@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var mainLabel: UILabel!
+    @IBOutlet var slider: UISlider!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +26,25 @@ class ViewController: UIViewController {
     }
     // MARK: - IB Actions.
     
-    @IBAction func segmentedControlAction() {
+    @IBAction func segmentControlAction() {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            mainLabel.text = "The first segment is selected"
+            mainLabel.textColor = .red
+        case 1:
+            mainLabel.text = "The second segment is selected"
+            mainLabel.textColor = .blue
+        default:
+            mainLabel.text = "The third segment is selected"
+            mainLabel.textColor = .yellow
+        }
     }
     
     // MARK: - Private method.
     private func setupMainLabel() {
         // we have to move here all logical parameters.
-        mainLabel.text = "Ну Погоди!!!"
+        
+        mainLabel.text = "Cat & Fox !!!"
         mainLabel.font = UIFont.systemFont(ofSize: 35)
         mainLabel.textAlignment = .center
         mainLabel.numberOfLines = 2
