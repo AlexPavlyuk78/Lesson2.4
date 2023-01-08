@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var mainLabel: UILabel!
     @IBOutlet var slider: UISlider!
+    @IBOutlet var textField: UITextField!
     
     
     override func viewDidLoad() {
@@ -44,6 +45,10 @@ class ViewController: UIViewController {
         
         mainLabel.text = "\(slider.value)"
         view.backgroundColor = view.backgroundColor?.withAlphaComponent(CGFloat(slider.value))
+        
+    }
+    
+    @IBAction func doneButtonPressed () {
         
     }
     
