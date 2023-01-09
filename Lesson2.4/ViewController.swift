@@ -49,6 +49,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed () {
+        guard let inputText = textField.text, !inputText.isEmpty else {
+            print("Text field is empty")
+            return
+        }
+        
+        if let _ = Double(inputText) {
+            print("Wrong format")
+            return
+        }
+        mainLabel.text = textField.text
         
     }
     
@@ -70,4 +80,9 @@ class ViewController: UIViewController {
         slider.maximumTrackTintColor = .green
         slider.thumbTintColor = .blue
     }
+}
+// Working with UIAlertController.
+
+extension ViewController {
+    
 }
