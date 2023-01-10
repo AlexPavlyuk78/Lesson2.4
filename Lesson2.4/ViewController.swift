@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet var mainLabel: UILabel!
     @IBOutlet var slider: UISlider!
     @IBOutlet var textField: UITextField!
+    @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var switchLable: UILabel!
+    
     
     
     override func viewDidLoad() {
@@ -41,6 +44,14 @@ class ViewController: UIViewController {
             mainLabel.textColor = .yellow
         }
     }
+    // Mark -> сдесь мы работаем с DateFormatter
+    
+    @IBAction func datePickerAction () {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        mainLabel.text = dateFormatter.string(from: datePicker.date)
+}
+    
     @IBAction func sliderAction() {
         
         mainLabel.text = "\(slider.value)"
@@ -59,6 +70,9 @@ class ViewController: UIViewController {
             return
         }
         mainLabel.text = textField.text
+        
+    }
+    @IBAction func switchAction(_ sender: UISwitch) {
         
     }
     
