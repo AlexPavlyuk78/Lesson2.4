@@ -44,13 +44,6 @@ class ViewController: UIViewController {
             mainLabel.textColor = .yellow
         }
     }
-    // Mark -> сдесь мы работаем с DateFormatter
-    
-    @IBAction func datePickerAction () {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        mainLabel.text = dateFormatter.string(from: datePicker.date)
-}
     
     @IBAction func sliderAction() {
         
@@ -72,8 +65,20 @@ class ViewController: UIViewController {
         mainLabel.text = textField.text
         
     }
+    
+    // Mark -> сдесь мы работаем с DateFormatter
+    
+    @IBAction func datePickerAction () {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        mainLabel.text = dateFormatter.string(from: datePicker.date)
+    }
+    
+    // Switch -> работаем над switch
+    
     @IBAction func switchAction(_ sender: UISwitch) {
-        
+        datePicker.isHidden = !sender.isOn
+        switchLable.text = sender.isOn ? "Hide Date Picker" : "Show Date Picker"
     }
     
     // MARK: - Private method.
